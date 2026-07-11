@@ -2,10 +2,10 @@
 <body>
    <div class="mb-3 ms-3">
  <h2>Edit your post</h2>
-    <p>username :  <%= post.content %></p></div>
+    <p>username :  <%= post.username %></p></div>
     <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
        <div class="mb-3 ms-3">
-  <label for="content" class="form-label">Edit Content</label>
+  <label for="content" class="form-label"><b>Edit Content:</b></label>
   <textarea class="form-control" id="content" rows="3" name="content"> <%= post.content %></textarea>
 </div>
     <button class="btn btn-primary ms-3">submit</button></form>

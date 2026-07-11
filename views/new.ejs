@@ -1,8 +1,16 @@
 <% layout("Layouts/boilerplate") %>
 <body>
-    <form method="post" action="/posts">
-        <input type="text" placeholder="enter username" name="username"> <br><br>
-        <textarea name="content" placeholder="write your post"></textarea> <br>
-        <button>submit</button>
-    </form>
+   <h2 class="mb-3 ms-3">Create New Post</h2>
+   <form action="/posts" method="post">
+             <div class="mb-3 ms-3">
+  <label for="username" class="form-label"><b>username:</b></label>
+  <input type="text" class="form-control" id="username" placeholder="" name="username">
+</div>
+<div class="mb-3 ms-3">
+  <label for="content" class="form-label"><b>content:</b></label>
+  <textarea class="form-control" id="content" rows="3" name="content"></textarea>
+  <button class="mb-3 mt-3 btn btn-success">Create</button>
+</div>
+
+   </form>
 </body>
