@@ -7,8 +7,8 @@
             <div class="card-body">
             <h5 class="user card-title">@ <%= post.username %></h5>
             <h4 class="content card-subtitle mb-2 text-body-secondary"> <%= post.content %></h4>
-        <a href="http://localhost:9090/posts/<%= post.id %>" class="btn btn-primary btn-sm">See in detail</a>
-        <a href="http://localhost:9090/posts/<%= post.id %>/edit" class="btn btn-primary btn-sm">edit</a>
+        <a href="/posts/<%= post.id %>" class="btn btn-primary btn-sm">See in detail</a>
+        <a href="/posts/<%= post.id %>/edit" class="btn btn-primary btn-sm">edit</a>
          <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
             <button class="btn btn-danger mt-3">Delete</button>
         </form>
