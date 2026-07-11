@@ -1,0 +1,20 @@
+<% layout("Layouts/boilerplate") %>
+<body>
+    <h1 class="ms-3" style="color: brown;">Quora Posts</h1>
+    <% for(let post of posts){ %>
+
+        <div class="post card mt-3 ms-3" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="user card-title">@ <%= post.username %></h5>
+            <h4 class="content card-subtitle mb-2 text-body-secondary"> <%= post.content %></h4>
+        <a href="http://localhost:9090/posts/<%= post.id %>" class="btn btn-primary btn-sm">See in detail</a>
+        <a href="http://localhost:9090/posts/<%= post.id %>/edit" class="btn btn-primary btn-sm">edit</a>
+         <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+            <button class="btn btn-danger mt-3">Delete</button>
+        </form>
+       </div>
+        </div>
+       
+        <% }%>
+        <a href="http://localhost:9090/posts/new" class="btn btn-success ms-3 mt-3 mb-3">Create new post</a>
+</body>
